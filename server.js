@@ -20,6 +20,10 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
+app.get('/', function (req, res) {
+  res.send('Express is working on IISNode!');
+});
+
 app.listen(PORT, () => {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
